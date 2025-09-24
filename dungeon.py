@@ -53,7 +53,7 @@ def player_heal(item_name):
     # The potion does not get consumed.
 
     # Health = 100.0
-    # use Health Potion
+    # use Health Potions
     # print -> you're already at max health. 
     # DO NOT remove the health potion.
 
