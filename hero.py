@@ -1,17 +1,21 @@
+from character import Character
 
+# TODO
+
+# 1. Create an Enemy Class that inherits from the Character class
+# 2. Move common functionality between the Hero and Enemy to the Character class
+# 3. Creat an Item class and different items inheriting from it.
+
+
+#from character import Character
 # Character ___ Hero
 #        |___ Enemy
 
-# TODO
-# Player Heal
-# USe Items
-# Connect the two files.
-
-class Hero ():
-
+class Hero (Character):
     def __init__(self):
-        self.max_health = 100.0
-        #TODO Move health_potion_strength to a different class
+        super().__init__() # Call the __init__ of the parent class
+        print("this is the Hero Class")
+    
         self.health_potion_strength = 5
         
         self.stats = {
@@ -63,16 +67,22 @@ class Hero ():
         pass
 
 
-#-------------------------------------------------
-hero = Hero() # <--- __init__(self)
-hero.print_stats()
-print("\n--------------------------------\n")
-hero.set_name("Omar")
-print("\n--------------------------------\n")
-hero.stats["health"] = 70
-hero.heal("health potion")
-print("\n--------------------------------\n")
+def main ():
+    print ("This is where our program/game starts")
+    #-------------------------------------------------
+    hero = Hero() # <--- __init__(self)
+    hero.print_stats()
+    print("\n--------------------------------\n")
+    hero.set_name("Omar")
+    print("\n--------------------------------\n")
+    hero.stats["health"] = 70
+    hero.heal("health potion")
+    print("\n--------------------------------\n")
+    print (f"{hero.max_health}")
+    hero.retreat()
+    #print(f"Here are your Hero Stats {player.stats}")
 
-#print(f"Here are your Hero Stats {player.stats}")
 
 
+if __name__ == '__main__':
+    main()

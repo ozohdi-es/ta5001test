@@ -1,3 +1,9 @@
+from hero import Hero
+
+
+player = Hero()
+player.attack()
+
 # TODO 
 #    1. Assign hero variables for: 
     #  attack moves
